@@ -40,4 +40,9 @@ private final LivroService livroService;
 	public List<Livro> getAllLivros(){
 		return livroService.findAllLivros();
 	}
+	
+	@GetMapping("/buscar/{nome}")
+	public List<Livro> ListarLivrosPorNome(@PathVariable String nome){
+		return livroService.buscarPorTitulo(nome);
+	}
 }

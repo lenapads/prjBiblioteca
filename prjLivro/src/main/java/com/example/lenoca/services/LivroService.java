@@ -30,4 +30,8 @@ public class LivroService {
 	public Livro saveLivro(Livro livro) {
 		return livroRepository.save(livro);
 	}
+	
+	public List<Livro> buscarPorTitulo(String nome){
+		return livroRepository.buscarPorTitulo(nome);	
+		}
 }
